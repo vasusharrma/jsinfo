@@ -20,6 +20,15 @@ setTimeout(() => {
   console.log("status : ", songs);
 }, 0);
 
-songs.then((data) => {
-  console.log(data);
-});
+songs
+  .then(
+    (data) => {
+      console.log(data);
+    },
+    (err) => {
+      console.log(err);
+    }
+  )
+  .finally(() => {
+    console.log("This is the final funtion finally");
+  });
